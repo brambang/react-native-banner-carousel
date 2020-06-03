@@ -36,9 +36,9 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
     private panStartIndex;
     private panOffsetFactor;
     constructor(props: any);
-    componentWillMount(): void;
+    UNSAFE_componentWillMount(): void;
     componentDidMount(): void;
-    componentWillReceiveProps(nextProps: CarouselProps): void;
+    UNSAFE_componentWillReceiveProps(nextProps: CarouselProps): void;
     private startAutoPlay();
     private stopAutoPlay();
     private computePanOffset(g);

@@ -13,7 +13,7 @@ class Carousel extends React.Component {
             scrollValue: new react_native_1.Animated.Value(0)
         };
     }
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.panResponder = react_native_1.PanResponder.create({
             onStartShouldSetPanResponder: () => {
                 this.startPanResponder();
@@ -53,7 +53,7 @@ class Carousel extends React.Component {
         }
         this.gotoPage(this.props.index + (this.props.loop ? 1 : 0), false);
     }
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.autoplay) {
             this.startAutoPlay();
         }
