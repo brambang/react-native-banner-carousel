@@ -282,6 +282,7 @@ class Carousel extends React.Component {
             this.renderIndicator({ childrenNum, pageNum, loop, scrollValue })));
     }
 }
+exports.default = Carousel;
 Carousel.defaultProps = {
     pageSize: react_native_1.Dimensions.get('window').width,
     index: 0,
@@ -295,11 +296,11 @@ Carousel.defaultProps = {
         return react_native_1.Animated.spring(animate, {
             toValue: toValue,
             friction: 10,
-            tension: 50
+            tension: 50,
+            useNativeDriver: false
         });
     }
 };
-exports.default = Carousel;
 const styles = react_native_1.StyleSheet.create({
     pageIndicatorStyle: {
         width: 6,
